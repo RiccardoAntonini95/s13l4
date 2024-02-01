@@ -46,6 +46,7 @@
             {
                 if (!loggedIn)
                 {
+                    Console.Clear();
                     Console.WriteLine("Benvenuto, effettua il login: ");
                     Console.WriteLine("Inserisci Username : ");
                     string user = Console.ReadLine();
@@ -73,6 +74,7 @@
             {
                 if (loggedIn)
                 {
+                    Console.Clear();
                     Console.WriteLine("Vuoi effettuare il Log Out? <si/no>");
                     string logOutFlag = Console.ReadLine();
                     if (logOutFlag == "si")
@@ -90,6 +92,7 @@
             {
                 if (loggedIn)
                 {
+                    Console.Clear();
                     Console.WriteLine($"Il tuo ultimo accesso è : {ultimoAccesso}");
                 }
                 else
@@ -102,7 +105,10 @@
             {
                 if(loggedIn)
                 {
-                    Console.WriteLine($"La lista dei tuoi accessi è : {listaDate}");
+                    foreach (DateTime data in listaDate)
+                    {
+                    Console.WriteLine($"{data}");
+                    }
                 }
 
                 else 
